@@ -54,8 +54,42 @@ class __TwigTemplate_9e272d63e0faade2cf2cfdc3ff5c919b8d2e0325397d457d5e8689ab3e9
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 5
-        echo "    <h1>Articles</h1>
-";
+        echo "   ";
+        if ((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new Twig_Error_Runtime('Variable "articles" does not exist.', 5, $this->source); })())) {
+            // line 6
+            echo "    <table class=\"table table-striped\">
+            <thead>
+                <tr>
+                    <th>article title</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+               ";
+            // line 14
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new Twig_Error_Runtime('Variable "articles" does not exist.', 14, $this->source); })()));
+            foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
+                // line 15
+                echo "                    <tr>
+                        <td>";
+                // line 16
+                echo twig_escape_filter($this->env, $context["article"], "html", null, true);
+                echo "</td>
+                        <td>
+                            <a href=\"/article/1\" class=\"btn btn-dark\">show</a>
+                        </td>
+                    </tr>
+               ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 22
+            echo "            </tbody>
+        </table>
+   ";
+        }
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -73,7 +107,7 @@ class __TwigTemplate_9e272d63e0faade2cf2cfdc3ff5c919b8d2e0325397d457d5e8689ab3e9
 
     public function getDebugInfo()
     {
-        return array (  57 => 5,  51 => 4,  39 => 3,  15 => 1,);
+        return array (  89 => 22,  77 => 16,  74 => 15,  70 => 14,  60 => 6,  57 => 5,  51 => 4,  39 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -82,7 +116,26 @@ class __TwigTemplate_9e272d63e0faade2cf2cfdc3ff5c919b8d2e0325397d457d5e8689ab3e9
 
 {% block title %}Articles{% endblock %}
 {% block body %}
-    <h1>Articles</h1>
+   {% if articles %}
+    <table class=\"table table-striped\">
+            <thead>
+                <tr>
+                    <th>article title</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+               {% for article in articles %}
+                    <tr>
+                        <td>{{ article }}</td>
+                        <td>
+                            <a href=\"/article/1\" class=\"btn btn-dark\">show</a>
+                        </td>
+                    </tr>
+               {% endfor %}
+            </tbody>
+        </table>
+   {% endif %}
 {% endblock %}", "articles/index.html.twig", "C:\\xampp\\htdocs\\article\\templates\\articles\\index.html.twig");
     }
 }

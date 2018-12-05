@@ -13,6 +13,7 @@
          */
         public function index() {
             //return new Response('<html><body>hello</body></html>');
-            return $this->render('articles/index.html.twig');
+            $articles = ['article 1', 'article 2'];
+            return $this->render('articles/index.html.twig', array('articles'=>$articles));
         }
     }

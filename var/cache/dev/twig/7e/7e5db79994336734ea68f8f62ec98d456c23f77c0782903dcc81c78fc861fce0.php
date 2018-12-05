@@ -43,18 +43,24 @@ class __TwigTemplate_87218dac96ce539145d753cf6f5a3f18271d6640a23802f2dfb09581a35
         echo "       
     </head>
     <body>
-        ";
+    ";
         // line 11
+        echo twig_include($this->env, $context, "inc/navbar.html.twig");
+        echo "
+        <div class=\"container\">
+            ";
+        // line 13
         $this->displayBlock('body', $context, $blocks);
-        // line 12
-        echo "        <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
+        // line 14
+        echo "        </div>
+        <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js\" integrity=\"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49\" crossorigin=\"anonymous\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js\" integrity=\"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy\" crossorigin=\"anonymous\"></script>
 
         ";
-        // line 16
+        // line 19
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 17
+        // line 20
         echo "    </body>
 </html>
 ";
@@ -86,7 +92,7 @@ class __TwigTemplate_87218dac96ce539145d753cf6f5a3f18271d6640a23802f2dfb09581a35
 
     }
 
-    // line 11
+    // line 13
     public function block_body($context, array $blocks = array())
     {
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
@@ -97,7 +103,7 @@ class __TwigTemplate_87218dac96ce539145d753cf6f5a3f18271d6640a23802f2dfb09581a35
 
     }
 
-    // line 16
+    // line 19
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
@@ -113,9 +119,14 @@ class __TwigTemplate_87218dac96ce539145d753cf6f5a3f18271d6640a23802f2dfb09581a35
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  101 => 16,  90 => 11,  79 => 7,  67 => 5,  58 => 17,  56 => 16,  50 => 12,  48 => 11,  43 => 8,  41 => 7,  36 => 5,  30 => 1,);
+        return array (  107 => 19,  96 => 13,  85 => 7,  73 => 5,  64 => 20,  62 => 19,  55 => 14,  53 => 13,  48 => 11,  43 => 8,  41 => 7,  36 => 5,  30 => 1,);
     }
 
     public function getSourceContext()
@@ -130,7 +141,10 @@ class __TwigTemplate_87218dac96ce539145d753cf6f5a3f18271d6640a23802f2dfb09581a35
        
     </head>
     <body>
-        {% block body %}{% endblock %}
+    {{ include('inc/navbar.html.twig')}}
+        <div class=\"container\">
+            {% block body %}{% endblock %}
+        </div>
         <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js\" integrity=\"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49\" crossorigin=\"anonymous\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js\" integrity=\"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy\" crossorigin=\"anonymous\"></script>
