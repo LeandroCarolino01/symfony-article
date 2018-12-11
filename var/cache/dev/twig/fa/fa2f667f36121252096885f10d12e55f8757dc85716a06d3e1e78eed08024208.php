@@ -77,7 +77,7 @@ class __TwigTemplate_758488370e1f0330539c27da7f37b764171bf1c187f4d29135c0c754317
                 echo twig_escape_filter($this->env, $context["article"], "html", null, true);
                 echo "</td>
                         <td>
-                            <a href=\"/article/1\" class=\"btn btn-dark\">show</a>
+                            <a href=\"/article/1\" class=\"btn btn-dark\">Show More</a>
                         </td>
                     </tr>
                ";
@@ -129,7 +129,7 @@ class __TwigTemplate_758488370e1f0330539c27da7f37b764171bf1c187f4d29135c0c754317
                     <tr>
                         <td>{{ article }}</td>
                         <td>
-                            <a href=\"/article/1\" class=\"btn btn-dark\">show</a>
+                            <a href=\"/article/1\" class=\"btn btn-dark\">Show More</a>
                         </td>
                     </tr>
                {% endfor %}

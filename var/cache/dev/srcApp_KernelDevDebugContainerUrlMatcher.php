@@ -16,6 +16,7 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
         $this->context = $context;
         $this->staticRoutes = array(
             '/' => array(array(array('_route' => 'app_article_index', '_controller' => 'App\\Controller\\ArticleController::index'), null, null, null, false, null)),
+            '/article/save' => array(array(array('_route' => 'app_article_save', '_controller' => 'App\\Controller\\ArticleController::save'), null, null, null, false, null)),
         );
         $this->regexpList = array(
             0 => '{^(?'
